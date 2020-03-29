@@ -9,42 +9,42 @@ typedef struct binar
 
 nod *adaugare(nod *prim, int k)
 {
-	nod *p, *q;
-	p = (nod *)malloc(sizeof(nod));
-	p->x = k;
-	p->urm = NULL;
+	nod *q, *p;
+	q = (nod *)malloc(sizeof(nod));
+	q->x = k;
+	q->urm = NULL;
 
 	if (prim == NULL) 
-		return p;
+		return q;
 	else 
 	{
-		q = prim;
+		p = prim;
 
-		while (q->urm != NULL)
+		while (p->urm != NULL)
 		{
-			q = q->urm;
+			p = p->urm;
 		}
-		q->urm = p;
+		p->urm = q;
 		return prim;
 	}
 }
 
 void afisare(nod *prim)
 {
-	nod *p;
+	nod *q;
 
-	p = prim;
+	q = prim;
 
-	while (p)
+	while (q)
 	{
 		printf("%d ", p->x);
-		p = p->urm;
+		q = q->urm;
 	}
 }
 
 int main()
 {
-	int n, k, *v, nr=0;
+	int n, x, *m, nr=0;
 	nod *prim;
 	prim = NULL;
 	printf("n="); 
@@ -52,19 +52,17 @@ int main()
 
 	while (n) 
 	{
-		if (n % 2) 
-			k = 1;
+	if (n % 2) 
+			x = 1;
 		else
 		{
-			k = 0;
-			(v + nr) = k;
+			x = 0;
 			n = n / 2;
 			nr++;
 		}
 	}
-	while (nr >= 0)
 	{
-		prim = adaugare(prim, (v + nr));
+		prim = adaugare(prim, (m + nr));
 	}
 	afisare(prim);
 	return 0;
