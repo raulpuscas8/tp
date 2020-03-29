@@ -53,15 +53,15 @@ int main()
 	while (n) 
 	{
 	if (n % 2) 
-			x = 1;
+	x = 1;
 		else
 		{
-			x = 0;
-			n = n / 2;
-			nr++;}
+		x = 0;
+		n = n / 2;
+		nr++;}
 		}
 	{
-		prim = adaugare(prim, (m + nr));
+	prim = adaugare(prim, (m + nr));
 	}
 	afisare(prim);
 	return 0;
