@@ -4,19 +4,19 @@
 
 int main()
 {
-	int *a, *b, *x;
-	a = (int*)malloc(sizeof(int));
+	int *f, *d, *x;
+	f = (int*)malloc(sizeof(int));
 
-	printf("a= ", a);
-	scanf("%d", &a);
+	printf("f= ", f);
+	scanf("%d", &f);
 
-	b = (int*)malloc(sizeof(int));
+	d = (int*)malloc(sizeof(int));
 
-	printf("b= ", b);
-	scanf("%d", &b);
+	printf("d= ", d);
+	scanf("%d", &d);
 
-	x = a; a = b;b = x;
-	printf("a= b", "b= x", "x= a");
+	x = f; f = d;d = x;
+	printf("f= d", "d= x", "x= f");
 	system("pause");
 	return 0;
 }
