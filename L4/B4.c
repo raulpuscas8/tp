@@ -58,9 +58,8 @@ int main()
 		{
 			x = 0;
 			n = n / 2;
-			nr++;
+			nr++;}
 		}
-	}
 	{
 		prim = adaugare(prim, (m + nr));
 	}
