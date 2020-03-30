@@ -10,14 +10,14 @@ void push(int c)
 void pop()
 {if (vf != -1)
 	vf--;
-		else
+	else
 printf("stiva este goala");}
 
 int verificare()
 {int j;
 	for (j = 0; j <= vf / 2; j++)
 		if (st[j] != st[vf - j])
-			return 0;}
+		return 0;}
 
 void afisare()
 {int i;
@@ -30,7 +30,7 @@ int binar(int n)
 	while()
 	{nr += (n % 2)*q;
 		q *= 10;
-			n /= 2;}
+		n /= 2;}
 	return nr;}
 
 int main()
