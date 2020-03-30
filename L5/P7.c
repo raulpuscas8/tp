@@ -12,7 +12,7 @@ void pop()
 	if (vf != -1)
 		vf--;
 	else
-		printf("Stiva este acum goala");
+		printf("Stiva este goala");
 }
 
 
@@ -54,9 +54,9 @@ int main()
 	
 	afisare();
 	if (verificare())
-		printf("nr este palindrom\n");
+		printf("este palindrom\n");
 	else
-		printf("nu nu este palindrom\n");
+		printf("nu este palindrom\n");
 	system("pause");
 	return 0;
 }
